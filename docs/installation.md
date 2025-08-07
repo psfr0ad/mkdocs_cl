@@ -17,7 +17,7 @@ Ici, vous trouverez toutes les étapes nécessaires pour installer et configurer
 
 ## Mise à jour du système
 
-Commencez par mettre à jour la liste des paquets et le système :
+<u>Commencez par mettre à jour la liste des paquets et le système :</u>
 
 sudo apt update && sudo apt upgrade -y
 
