@@ -21,6 +21,20 @@ Commencez par mettre à jour la liste des paquets et le système :
 
 sudo apt update && sudo apt upgrade -y
 
+Debian utilise un fichier appelé /etc/apt/sources.list pour définir les dépôts depuis lesquels il télécharge les logiciels.
+
+Voici un exemple de configuration propre et complète pour Debian stable :
+
+deb http://deb.debian.org/debian/ stable main contrib non-free
+deb-src http://deb.debian.org/debian/ stable main contrib non-free
+
+deb http://security.debian.org/debian-security stable-security main contrib non-free
+deb-src http://security.debian.org/debian-security stable-security main contrib non-free
+
+deb http://deb.debian.org/debian/ stable-updates main contrib non-free
+deb-src http://deb.debian.org/debian/ stable-updates main contrib non-free
+
+
 
 ---
 
