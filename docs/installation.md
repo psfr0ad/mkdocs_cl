@@ -47,14 +47,10 @@ deb-src http://deb.debian.org/debian/ stable-updates main contrib non-free
 
 Remmina est un client de bureau à distance compatible RDP, VNC, SSH, etc. Il est idéal pour un poste client léger.
 
-sudo apt install 
+sudo apt install remmina
 
 ---
 
-## Configuration supplémentaire
 
-<!-- Contenu à venir -->
-
----
 
 > *N’hésitez pas à revenir régulièrement pour consulter les mises à jour de cette section.*
