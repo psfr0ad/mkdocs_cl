@@ -3,7 +3,7 @@
 site_name: Client Léger Debian
 site_description: Documentation pour configurer un client léger Debian en ligne de commande
 site_author: Leonard Bonnet
-site_url: https://github.com/psfr0ad/doc-clientleger-nimrod
+site_url: https://github.com/psfr0ad/doc-clientleger-nimrodmkdocs gh-deploy
 
 theme:
   name: material

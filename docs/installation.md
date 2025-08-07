@@ -43,7 +43,11 @@ deb-src http://deb.debian.org/debian/ stable-updates main contrib non-free
 
 ## Installation des paquets essentiels
 
-<!-- Contenu à venir -->
+**Installation du RDP Remmina :**
+
+Remmina est un client de bureau à distance compatible RDP, VNC, SSH, etc. Il est idéal pour un poste client léger.
+
+sudo apt install 
 
 ---
 
