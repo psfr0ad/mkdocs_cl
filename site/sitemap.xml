@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://github.com/psfr0ad/doc-clientleger-nimrod/</loc>
+         <loc>https://github.com/psfr0ad/mkdocs_cl_nimrod/</loc>
          <lastmod>2025-08-07</lastmod>
     </url>
     <url>
-         <loc>https://github.com/psfr0ad/doc-clientleger-nimrod/depannage/</loc>
+         <loc>https://github.com/psfr0ad/mkdocs_cl_nimrod/depannage/</loc>
          <lastmod>2025-08-07</lastmod>
     </url>
     <url>
-         <loc>https://github.com/psfr0ad/doc-clientleger-nimrod/installation/</loc>
+         <loc>https://github.com/psfr0ad/mkdocs_cl_nimrod/installation/</loc>
          <lastmod>2025-08-07</lastmod>
     </url>
     <url>
-         <loc>https://github.com/psfr0ad/doc-clientleger-nimrod/securite/</loc>
+         <loc>https://github.com/psfr0ad/mkdocs_cl_nimrod/securite/</loc>
          <lastmod>2025-08-07</lastmod>
     </url>
     <url>
-         <loc>https://github.com/psfr0ad/doc-clientleger-nimrod/utilisation/</loc>
+         <loc>https://github.com/psfr0ad/mkdocs_cl_nimrod/utilisation/</loc>
          <lastmod>2025-08-07</lastmod>
     </url>
 </urlset>
