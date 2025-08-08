@@ -77,6 +77,7 @@ sudo setfacl -m u:client:0 /usr/bin/gnome-shell-extension-prefs
 `gnome-shell-extension-prefs` : Empêche l'utilisateur client de modifier les préférences des extensions GNOME.
 
 **Commandes sensibles à traiter avec précaution**
+
 Ces commandes doivent être appliquées avec attention. Elles restreignent l'accès à des outils qui peuvent modifier l'environnement système de manière significative.
 
 !!! warning "Important"
@@ -97,6 +98,8 @@ sudo -u client gnome-software
 sudo -u client gnome-extensions-app
 ```
 
+!!! info "attendue"
+    permission denied
 
 
 
