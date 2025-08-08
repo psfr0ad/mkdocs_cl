@@ -11,8 +11,8 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  logo: assets/logo.png  
-  favicon: assets/logo.jpeg
+  logo: assets/images/logo.png  
+  favicon: assets/imagesfavicon.png  # Assure-toi d'avoir un favicon spécifique ici
   features:
     - navigation.tabs
     - navigation.sections
