@@ -841,8 +841,31 @@ sudo<span class="w"> </span>chattr<span class="w"> </span>+i<span class="w"> </s
 </code></pre></div>
 <hr />
 <h2 id="mises-a-jour-de-securite">Mises à jour de sécurité<a class="headerlink" href="#mises-a-jour-de-securite" title="Permanent link">&para;</a></h2>
-<!-- Contenu à venir -->
-
+<p><strong>Mettre à jour les paquets pour garantir la sécurité</strong></p>
+<p>La première étape pour maintenir votre système sécurisé est de s'assurer que tous les paquets sont à jour, en particulier ceux liés à la sécurité.</p>
+<ol>
+<li>Mettre à jour les paquets avec </li>
+</ol>
+<p>Vous pouvez utiliser la commande suivante pour mettre à jour les paquets de sécurité sur votre système Debian. Cela s'applique à la fois aux mises à jour de sécurité critiques et aux autres mises à jour de paquets :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+</code></pre></div>
+<ul>
+<li>
+<p>sudo apt update : Met à jour la liste des paquets disponibles depuis les dépôts.</p>
+</li>
+<li>
+<p>sudo apt upgrade -y : Met à jour les paquets installés vers les dernières versions disponibles. L'option -y permet d'accepter automatiquement toutes les propositions de mises à jour.</p>
+</li>
+</ul>
+<p><strong>Mettre à jour les services et vérifier les vulnérabilités</strong></p>
+<p>Une fois que votre système est à jour, vous devez également vous assurer que tous les services sensibles (SSH, RDP, etc.) sont sécurisés et n'ont pas de vulnérabilités ouvertes.</p>
+<h1 id="mise-a-jour-des-extensions-gnome">Mise à jour des extensions GNOME<a class="headerlink" href="#mise-a-jour-des-extensions-gnome" title="Permanent link">&para;</a></h1>
+<p>Si vous utilisez des extensions GNOME (comme dans votre configuration), il est important de mettre à jour ces extensions pour corriger toute vulnérabilité ou problème de sécurité. Vous pouvez faire cela via gnome-shell-extension-manager ou en vérifiant régulièrement les extensions via les commandes suivantes :</p>
+<p><code>gnome-shell-extension-manager --upgrade</code></p>
+<h1 id="verifier-les-services-et-les-ports-ouverts">Vérifier les services et les ports ouverts<a class="headerlink" href="#verifier-les-services-et-les-ports-ouverts" title="Permanent link">&para;</a></h1>
+<p>Utilisez la commande netstat ou ss pour vérifier les services en écoute et les ports ouverts :</p>
+<p><code>sudo netstat -tulnp</code></p>
+<p>Cela vous permet de vérifier quels services sont accessibles depuis l'extérieur, et vous pouvez prendre des mesures pour fermer les ports non utilisés ou sécuriser les services ouverts.</p>
 <hr />
 <h2 id="pare-feu-et-protections">Pare-feu et protections<a class="headerlink" href="#pare-feu-et-protections" title="Permanent link">&para;</a></h2>
 <!-- Contenu à venir -->
