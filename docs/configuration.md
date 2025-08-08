@@ -110,7 +110,7 @@ Activer des politiques de mots de passe si nécessaire (pam_pwquality, chage, et
 
 1) Configuration d'un autostart d'application ici pour Remmina :
 
-- **Créer le répertoirev :**
+- **Créer le répertoire :**
 
     `sudo mkdir -p /home/client/.config/autostart`
 
