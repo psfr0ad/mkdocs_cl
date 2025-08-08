@@ -17,7 +17,7 @@ Cette section vous guide à travers les problèmes courants et leur résolution 
 ## Problèmes de démarrage
 
 <!-- Contenu à venir -->
-
+g
 ---
 
 ## Erreurs courantes
