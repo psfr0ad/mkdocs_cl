@@ -141,7 +141,38 @@ sudo chattr +i /home/client/Téléchargements
 
 ## Mises à jour de sécurité
 
-<!-- Contenu à venir -->
+**Mettre à jour les paquets pour garantir la sécurité**
+
+La première étape pour maintenir votre système sécurisé est de s'assurer que tous les paquets sont à jour, en particulier ceux liés à la sécurité.
+
+1. Mettre à jour les paquets avec 
+
+Vous pouvez utiliser la commande suivante pour mettre à jour les paquets de sécurité sur votre système Debian. Cela s'applique à la fois aux mises à jour de sécurité critiques et aux autres mises à jour de paquets :
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+- sudo apt update : Met à jour la liste des paquets disponibles depuis les dépôts.
+
+- sudo apt upgrade -y : Met à jour les paquets installés vers les dernières versions disponibles. L'option -y permet d'accepter automatiquement toutes les propositions de mises à jour.
+
+
+**Mettre à jour les services et vérifier les vulnérabilités**
+
+Une fois que votre système est à jour, vous devez également vous assurer que tous les services sensibles (SSH, RDP, etc.) sont sécurisés et n'ont pas de vulnérabilités ouvertes.
+
+# Mise à jour des extensions GNOME
+Si vous utilisez des extensions GNOME (comme dans votre configuration), il est important de mettre à jour ces extensions pour corriger toute vulnérabilité ou problème de sécurité. Vous pouvez faire cela via gnome-shell-extension-manager ou en vérifiant régulièrement les extensions via les commandes suivantes :
+
+`gnome-shell-extension-manager --upgrade`
+
+# Vérifier les services et les ports ouverts
+Utilisez la commande netstat ou ss pour vérifier les services en écoute et les ports ouverts :
+
+`sudo netstat -tulnp`
+
+Cela vous permet de vérifier quels services sont accessibles depuis l'extérieur, et vous pouvez prendre des mesures pour fermer les ports non utilisés ou sécuriser les services ouverts.
 
 ---
 
