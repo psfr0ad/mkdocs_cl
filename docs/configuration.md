@@ -181,7 +181,7 @@ echo "Les fichiers .desktop ont été modifiés pour l'utilisateur client."
     Dans le terminal, un message doit apparaître : "Les fichiers .desktop ont été modifiés pour l’utilisateur client."
 
 !!! warning "Important"
-Enfin, remettez NoDisplay=true dans les fichiers .desktop que vous souhaitez rendre visibles sur le bureau de l'utilisateur concerné.
+    Enfin, remettez NoDisplay=true dans les fichiers .desktop que vous souhaitez rendre visibles sur le bureau de l'utilisateur concerné.
 ---
 
 ## Configuration avancée
