@@ -8,9 +8,13 @@ Cette section aborde les aspects essentiels pour sécuriser votre client léger 
 
 ## Table des matières
 
-- [Gestion des utilisateurs](#gestion-des-utilisateurs)  
-- [Mises à jour de sécurité](#mises-à-jour-de-sécurité)  
-- [Masquer les apps](#Masquer-et-désactiver-les-applications-restante)  
+- [Gestion des utilisateurs](#gestion-des-utilisateurs)
+- [Mises à jour de sécurité](#mises-à-jour-de-sécurité)
+- [Masquer et désactiver les applications restantes](#masquer-et-désactiver-les-applications-restantes)
+- [Gestion des ACL pour l'utilisateur](#gestion-des-acl-pour-lutilisateur)
+- [Restreindre l'accès aux applications sensibles](#restreindre-laccès-aux-applications-sensibles)
+- [Désactivation du Bluetooth](#désactivation-du-bluetooth)
+- [Désactiver les téléchargements pour l'utilisateur `client`](#désactiver-les-téléchargements-pour-lutilisateur-client)
 
 ---
 !!! info danger "Danger"
