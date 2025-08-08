@@ -10,7 +10,7 @@ Cette page est destinée à détailler les étapes nécessaires pour configurer 
 ## Table des matières
 
 - [Introduction](#introduction)  
-- [Configuration système](#configuration-système)  
+- [Pourquoi une configuration personnalisée ?](#pourquoi-une-configuration-personnalisée)  
 - [Configuration utilisateur](#configuration-utilisateur)    
 - [Configuration avancée](#configuration-avancée)  
 

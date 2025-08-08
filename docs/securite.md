@@ -8,13 +8,11 @@ Cette section aborde les aspects essentiels pour sécuriser votre client léger 
 
 ## Table des matières
 
-- [Gestion des utilisateurs](#gestion-des-utilisateurs)
+- [Gestion des ACL pour l'utilisateur](#gestion-des-acl-pour-lutilisateur)
+- [Restreindre l'accès aux applications](#restreindre-laccès-aux-applications)
+- [Désactiver les téléchargements pour l'utilisateur `client`](#désactiver-les-téléchargements-pour-lutilisateur-client)
 - [Mises à jour de sécurité](#mises-à-jour-de-sécurité)
 - [Masquer et désactiver les applications restantes](#masquer-et-désactiver-les-applications-restantes)
-- [Gestion des ACL pour l'utilisateur](#gestion-des-acl-pour-lutilisateur)
-- [Restreindre l'accès aux applications sensibles](#restreindre-laccès-aux-applications-sensibles)
-- [Désactivation du Bluetooth](#désactivation-du-bluetooth)
-- [Désactiver les téléchargements pour l'utilisateur `client`](#désactiver-les-téléchargements-pour-lutilisateur-client)
 
 ---
 !!! info danger "Danger"
@@ -184,7 +182,7 @@ Cela vous permet de vérifier quels services sont accessibles depuis l'extérieu
 
 ---
 
-## Masquer et désactiver les applications restante 
+## Masquer et désactiver les applications restantes 
 
 
 Une fois que vous avez configuré et personnalisé votre environnement client léger, il est souvent nécessaire de **masquer** certaines applications du menu, ou même de les désactiver complètement, pour améliorer l'expérience utilisateur et renforcer la sécurité.
