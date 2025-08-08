@@ -237,6 +237,69 @@ StartUpNotify=true
 
     `sudo chmod +x   /home/client/.local/share/applications/logout.desktop`
 
+
+### Configuration de L'extension de Just Perfection
+
+
+- **🔍 1. Rechercher l’extension "Just Perfection"**
+Dans l’Extension Manager :
+
+Allez dans l’onglet "Browse" (ou "Parcourir").
+
+Recherchez "Just Perfection" dans la barre de recherche.
+
+Cliquez sur Install pour l’installer.
+
+- **🧼 2. Désactiver les éléments du bureau**
+Après installation :
+
+- Allez dans l’onglet "Installed"
+
+- Cliquez sur Just Perfection
+
+- Cliquez sur "Personnaliser"
+
+Dans les options, désactivez tout ce que vous ne souhaitez pas afficher, notamment :
+
+- Activités
+
+- Barre supérieure
+
+- Menu utilisateur
+
+- Dock
+
+- Bouton d’alimentation
+
+- Etc.
+
+Laissez uniquement "Show Desktop Icons" ou "Desktop Shortcuts" activé, pour que les raccourcis du bureau restent visibles (par exemple, Remmina ou Firefox).
+
+!!! info "Conseil"
+    Pensez à tester la session avec un utilisateur non-administrateur pour valider le rendu final avant de déployer à grande échelle.
+
+Avec Just Perfection, vous obtenez un bureau épuré, sécurisé, et parfaitement adapté à une utilisation client léger.
+
+---
+
+### ✅ Résultat
+
+Tu obtiens :
+
+- Un bureau **sans distractions**
+- Un accès réduit aux fonctionnalités système
+- Une meilleure UX pour les utilisateurs peu techniques
+
+---
+
+### 💡 Tu veux aller plus loin ?
+
+Je peux t’ajouter une section sur :
+
+- Le verrouillage du clic droit
+- Le lancement automatique d'applications
+- La suppression de la barre des tâches
+
 ---
 
 ## Configuration avancée
