@@ -17,11 +17,17 @@ theme:
 nav:
   - Accueil: index.md
   - Installation:
-      - Mise à jour: docs/install_update.md
-      - Paquets essentiels: docs/install_packages.md
+      - Mise à jour: installation
+      - Paquets essentiels: installation
   - Configuration:
-      - Session légère: docs/config_session.md
-  - Ressources: docs/resources.md
+      - Session légère: configuration
+  - Sécurité: 
+      - droit: securite
+      - ACL: securite
+  - Utilisation:
+      - Prise en main: utilisation
+      - Avancée: utilisation
+  - Ressources: resources
 
 plugins:
   - search
