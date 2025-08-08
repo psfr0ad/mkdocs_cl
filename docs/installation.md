@@ -25,7 +25,8 @@ Debian utilise un fichier appelé /etc/apt/sources.list pour définir les dépô
 
 **Voici un exemple de configuration propre et complète pour Debian stable :**
 
-`deb http://deb.debian.org/debian/ stable main contrib non-free
+```bash
+deb http://deb.debian.org/debian/ stable main contrib non-free
 
 deb-src http://deb.debian.org/debian/ stable main contrib non-free
 
@@ -36,6 +37,7 @@ deb-src http://security.debian.org/debian-security stable-security main contrib 
 deb http://deb.debian.org/debian/ stable-updates main contrib non-free
 
 deb-src http://deb.debian.org/debian/ stable-updates main contrib non-free`
+```
 
 
 
@@ -47,7 +49,7 @@ deb-src http://deb.debian.org/debian/ stable-updates main contrib non-free`
 
 Remmina est un client de bureau à distance compatible RDP, VNC, SSH, etc. Il est idéal pour un poste client léger.
 
-sudo apt install remmina
+`sudo apt install remmina`
 
 ---
 
