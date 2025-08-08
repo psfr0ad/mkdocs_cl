@@ -108,9 +108,34 @@ Activer des politiques de mots de passe si nécessaire (pam_pwquality, chage, et
 
 ---
 
-## Configuration réseau
+## Configuration des appliations .desktop et .sh :
 
-<!-- Contenu à venir -->
+1) Configuration d'un autostart d'application ici pour Remmina 
+- créer le répertoire: 
+
+ `sudo mkdir -p /home/client/.config/autostart`
+
+- créer le fichiers:
+ 
+`sudo nano /home/client/.config/autostart/remmina.desktop`
+
+- Ajouter ceci dans le fichiers :
+
+```bash
+[Desktop Entry]
+Type=Application
+Name=Remmina
+Exec=/usr/bin/remmina
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+```
+
+- Rendre le fichiers éxecutable :
+
+`chmod +x /home/client/.config/autostart/remmina.desktop`
+
+
 
 ---
 
