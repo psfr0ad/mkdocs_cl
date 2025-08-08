@@ -8,7 +8,7 @@ Cette documentation a été générée avec [MkDocs](https://www.mkdocs.org/) et
 
 ## 🔗 Accès rapide à la documentation
 
-👉 **[Voir la documentation en ligne](https://github.com/psfr0ad/mkdocs_cl_nimrod/)**
+👉 **[Voir la documentation en ligne](https://psfr0ad.github.io/mkdocs_cl/)**
 
 ---
 
