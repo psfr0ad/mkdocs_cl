@@ -84,6 +84,22 @@ Ces commandes doivent être appliquées avec attention. Elles restreignent l'acc
     Ne laissez pas ces commandes accessibles à des utilisateurs non autorisés. Ces outils peuvent affecter le système global.
 
 
+**Désactivation du Bluetooth**
+
+Si vous souhaitez désactiver l'accès au Bluetooth pour l'utilisateur client, vous pouvez également limiter l'accès aux outils Bluetooth avec les commandes suivantes :
+
+```bash
+sudo setfacl -m u:client:0 /usr/bin/bluetoothctl
+
+sudo setfacl -m u:client:0 /usr/bin/hciconfig
+```
+
+Explications :
+`bluetoothctl` : Empêche l'utilisateur client de gérer les périphériques Bluetooth.
+
+`hciconfig` : Empêche l'utilisateur client de configurer les interfaces Bluetooth.
+
+
 **Vérification des permissions :**
 
 Après avoir appliqué les ACL, il est crucial de vérifier que l'utilisateur client ne peut pas exécuter les commandes restreintes. Vous pouvez tester les restrictions avec les commandes suivantes :
@@ -100,9 +116,6 @@ sudo -u client gnome-extensions-app
 
 !!! info "attendue"
     permission denied
-
-
-
 
 ---
 
