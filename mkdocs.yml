@@ -39,8 +39,8 @@ extra_css:
     <style>
       /* Agrandir le logo */
       .md-header-logo {
-          height: 80px;  /* Ajuste cette valeur selon tes préférences */
-          width: auto;   /* Garde la proportion du logo */
+          height: 80px;  
+          width: auto;   
       }
     </style>
 
