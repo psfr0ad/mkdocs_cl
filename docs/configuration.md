@@ -11,8 +11,7 @@ Cette page est destinée à détailler les étapes nécessaires pour configurer 
 
 - [Introduction](#introduction)  
 - [Configuration système](#configuration-système)  
-- [Configuration utilisateur](#configuration-utilisateur)  
-- [Configuration réseau](#configuration-réseau)  
+- [Configuration utilisateur](#configuration-utilisateur)    
 - [Configuration avancée](#configuration-avancée)  
 
 ---
