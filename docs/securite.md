@@ -162,12 +162,14 @@ sudo apt update && sudo apt upgrade -y
 
 Une fois que votre système est à jour, vous devez également vous assurer que tous les services sensibles (SSH, RDP, etc.) sont sécurisés et n'ont pas de vulnérabilités ouvertes.
 
-# Mise à jour des extensions GNOME
+**Mise à jour des extensions GNOME**
+
 Si vous utilisez des extensions GNOME (comme dans votre configuration), il est important de mettre à jour ces extensions pour corriger toute vulnérabilité ou problème de sécurité. Vous pouvez faire cela via gnome-shell-extension-manager ou en vérifiant régulièrement les extensions via les commandes suivantes :
 
 `gnome-shell-extension-manager --upgrade`
 
-# Vérifier les services et les ports ouverts
+**Vérifier les services et les ports ouverts**
+
 Utilisez la commande netstat ou ss pour vérifier les services en écoute et les ports ouverts :
 
 `sudo netstat -tulnp`
