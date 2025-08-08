@@ -17,8 +17,7 @@ Cette section aborde les aspects essentiels pour sécuriser votre client léger 
 ## Gestion des utilisateurs
 
 !!! info warning "Danger"
-   Ne mettez pas en place la sécurité tant que l'installation et la configuration ne sont pas terminées.
-
+     Ne mettez pas en place la sécurité tant que l'installation et la configuration ne sont pas terminées.
 ---
 
 ## Mises à jour de sécurité
