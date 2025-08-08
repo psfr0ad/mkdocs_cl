@@ -118,6 +118,24 @@ sudo -u client gnome-extensions-app
 !!! info "attendue"
     permission denied
 
+
+## Désactiver les téléchargements pour l'utilisateur `client`
+
+Afin de restreindre les téléchargements dans le répertoire **Téléchargements** pour l'utilisateur `client`, nous allons utiliser deux commandes principales :
+
+1. **Retirer les permissions d'exécution** sur le répertoire **Téléchargements**.
+2. **Rendre le répertoire immutable** pour empêcher toute modification.
+
+### Retirer les permissions d'exécution
+
+La commande suivante permet de supprimer les permissions d'exécution pour l'utilisateur `client` sur le répertoire **Téléchargements**, ce qui empêche l'utilisateur d'y accéder via la ligne de commande :
+
+```bash
+sudo chmod -R -x /home/client/Téléchargements
+
+sudo chattr +i /home/client/Téléchargements
+```
+
 ---
 
 
