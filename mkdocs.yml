@@ -35,7 +35,14 @@ plugins:
   - search
 
 extra_css:
-  - stylesheets/custom.css
+  - |
+    <style>
+      /* Agrandir le logo */
+      .md-header-logo {
+          height: 80px;  /* Ajuste cette valeur selon tes préférences */
+          width: auto;   /* Garde la proportion du logo */
+      }
+    </style>
 
 markdown_extensions:
   - admonition
