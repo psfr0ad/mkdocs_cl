@@ -753,7 +753,7 @@
 <ul>
 <li><a href="#gestion-des-utilisateurs">Gestion des utilisateurs</a>  </li>
 <li><a href="#mises-à-jour-de-sécurité">Mises à jour de sécurité</a>  </li>
-<li><a href="#pare-feu-et-protections">Pare-feu et protections</a>  </li>
+<li><a href="#Masquer-et-désactiver-les-applications-restante">Masquer les apps</a>  </li>
 </ul>
 <hr />
 <div class="admonition info danger">
@@ -867,9 +867,19 @@ sudo<span class="w"> </span>chattr<span class="w"> </span>+i<span class="w"> </s
 <p><code>sudo netstat -tulnp</code></p>
 <p>Cela vous permet de vérifier quels services sont accessibles depuis l'extérieur, et vous pouvez prendre des mesures pour fermer les ports non utilisés ou sécuriser les services ouverts.</p>
 <hr />
-<h2 id="pare-feu-et-protections">Pare-feu et protections<a class="headerlink" href="#pare-feu-et-protections" title="Permanent link">&para;</a></h2>
-<!-- Contenu à venir -->
-
+<h2 id="masquer-et-desactiver-les-applications-restante">Masquer et désactiver les applications restante<a class="headerlink" href="#masquer-et-desactiver-les-applications-restante" title="Permanent link">&para;</a></h2>
+<p>Une fois que vous avez configuré et personnalisé votre environnement client léger, il est souvent nécessaire de <strong>masquer</strong> certaines applications du menu, ou même de les désactiver complètement, pour améliorer l'expérience utilisateur et renforcer la sécurité.</p>
+<p>Une méthode courante pour cela sur un système GNOME est d'utiliser la propriété <code>NoDisplay=true</code> dans les fichiers <code>.desktop</code> des applications concernées.</p>
+<h3 id="1-masquer-une-application-en-utilisant-nodisplaytrue">1. Masquer une application en utilisant <code>NoDisplay=true</code><a class="headerlink" href="#1-masquer-une-application-en-utilisant-nodisplaytrue" title="Permanent link">&para;</a></h3>
+<p>Dans GNOME, chaque application installée crée un fichier <code>.desktop</code> qui définit comment l'application est affichée dans le menu d'applications. </p>
+<p>Pour <strong>masquer une application</strong>, nous allons ajouter ou modifier la ligne <code>NoDisplay=true</code> dans son fichier <code>.desktop</code>.</p>
+<h4 id="exemple-de-commande-pour-masquer-une-application">Exemple de commande pour masquer une application :<a class="headerlink" href="#exemple-de-commande-pour-masquer-une-application" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/^NoDisplay=false/NoDisplay=true/&#39;</span><span class="w"> </span>/usr/share/applications/&lt;nom-de-lapplication&gt;.desktop
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">fréquent</p>
+<p>La plupart du temps il ne reste que l'application <code>gnome-extensions-manager</code>.</p>
+</div>
 <hr />
 <blockquote>
 <p><em>La sécurité est un élément clé, gardez cette section à jour.</em></p>
