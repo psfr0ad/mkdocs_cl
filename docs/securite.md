@@ -205,4 +205,4 @@ sudo sed -i 's/^NoDisplay=false/NoDisplay=true/' /usr/share/applications/<nom-de
 
 ---
 
-> *La sécurité est un élément clé, gardez cette section à jour.*
+> *La sécurité est un pilier fondamental de tout système informatique. Ne négligez aucune étape, chaque mesure compte pour protéger vos données et garantir la stabilité de votre environnement.*

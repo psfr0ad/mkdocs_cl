@@ -282,30 +282,4 @@ Avec Just Perfection, vous obtenez un bureau épuré, sécurisé, et parfaitemen
 
 ---
 
-### ✅ Résultat
-
-Tu obtiens :
-
-- Un bureau **sans distractions**
-- Un accès réduit aux fonctionnalités système
-- Une meilleure UX pour les utilisateurs peu techniques
-
----
-
-### 💡 Tu veux aller plus loin ?
-
-Je peux t’ajouter une section sur :
-
-- Le verrouillage du clic droit
-- Le lancement automatique d'applications
-- La suppression de la barre des tâches
-
----
-
-## Configuration avancée
-
-<!-- Contenu à venir -->
-
----
-
 > *N’hésitez pas à revenir régulièrement pour consulter les mises à jour de cette section.*
