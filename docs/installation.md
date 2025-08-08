@@ -51,14 +51,6 @@ Remmina est un client de bureau à distance compatible RDP, VNC, SSH, etc. Il es
 
 `sudo apt install remmina`
 
-**Installation de l'extension pour restreindre le bureau client :**
-
-Gnome shell extension manager et une application quui vas permettre l'installation d'extension pour gnome.
-
-`sudo apt install gnome-shell-extension-manager`
-
-Allez dans recherche et taper Just Perfection une fois trouver et installer desactiver tout  bureaux allez dans personaliser et ne laisser que raccourcie bureau pour voir les deux application ce faire.
-
 ---
 ## 🎛️ Installation de l'extension pour restreindre le bureau client
 
@@ -78,7 +70,7 @@ Une fois installée, lancez-la via le menu d’applications ou avec la commande 
 
 `gnome-shell-extension-manager` 
 
-🔍 2. Rechercher l’extension "Just Perfection"
+**🔍 2. Rechercher l’extension "Just Perfection"**
 Dans l’Extension Manager :
 
 Allez dans l’onglet "Browse" (ou "Parcourir").
@@ -87,28 +79,28 @@ Recherchez "Just Perfection" dans la barre de recherche.
 
 Cliquez sur Install pour l’installer.
 
-🧼 3. Désactiver les éléments du bureau
+**🧼 3. Désactiver les éléments du bureau**
 Après installation :
 
-Allez dans l’onglet "Installed"
+- Allez dans l’onglet "Installed"
 
-Cliquez sur Just Perfection
+- Cliquez sur Just Perfection
 
-Cliquez sur "Personnaliser"
+- Cliquez sur "Personnaliser"
 
 Dans les options, désactivez tout ce que vous ne souhaitez pas afficher, notamment :
 
-Activités
+- Activités
 
-Barre supérieure
+- Barre supérieure
 
-Menu utilisateur
+- Menu utilisateur
 
-Dock
+- Dock
 
-Bouton d’alimentation
+- Bouton d’alimentation
 
-Etc.
+- Etc.
 
 Laissez uniquement "Show Desktop Icons" ou "Desktop Shortcuts" activé, pour que les raccourcis du bureau restent visibles (par exemple, Remmina ou Firefox).
 
