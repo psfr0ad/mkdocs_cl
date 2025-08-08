@@ -833,11 +833,11 @@ Ne jamais donner sudo à un utilisateur final non technique</p>
 - créer le répertoire: </p>
 <p><code>sudo mkdir -p /home/client/.config/autostart</code></p>
 <ul>
-<li>créer le fichiers:</li>
+<li><strong>créer le fichiers:</strong></li>
 </ul>
 <p><code>sudo nano /home/client/.config/autostart/remmina.desktop</code></p>
 <ul>
-<li>Ajouter ceci dans le fichiers :</li>
+<li><strong>Ajouter ceci dans le fichiers :</strong></li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="o">[</span>Desktop<span class="w"> </span>Entry<span class="o">]</span>
 <span class="nv">Type</span><span class="o">=</span>Application
@@ -848,12 +848,55 @@ Ne jamais donner sudo à un utilisateur final non technique</p>
 X-GNOME-Autostart-enabled<span class="o">=</span><span class="nb">true</span>
 </code></pre></div>
 <ul>
-<li>Rendre le fichiers éxecutable :</li>
+<li><strong>Rendre le fichiers éxecutable :</strong></li>
 </ul>
 <p><code>chmod +x /home/client/.config/autostart/remmina.desktop</code></p>
 <div class="admonition info">
 <p class="admonition-title">résultat attendue</p>
 <p>Lorsque vous vous connecterez à l'utilisateur <code>client</code>, Remmina se lancera automatiquement sur le bureau, sans aucune action de votre part, prêt à l'emploi.</p>
+</div>
+<p>2) Configuration d'un fichier .sh pour rendre les applications invisbles et inaccessible depuis le bureau avec <code>Nodisplay=true</code> :</p>
+<ul>
+<li><strong>créer le fichier suivant :</strong></li>
+</ul>
+<p><code>sudo nano /home/client/modif-client-app-NoD.sh</code></p>
+<ul>
+<li><strong>Ajouter ceci dans le fichier :</strong></li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Répertoire contenant les fichiers . desktop pour l&#39;utilisateur actuel</span>
+<span class="nv">client_desktop_dir</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/. local/share/applications&quot;</span>
+<span class="c1"># Créer le répertotre s&#39;il n&#39;existe pas</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$client_desktop_dir</span><span class="s2">&quot;</span>
+<span class="c1"># Copier les fichiers , desktop du répertoire système vers le répertotre utilisat</span>
+cp<span class="w"> </span>/usr/share/applicatfons/*.<span class="w"> </span>desktop<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$nimrod_desktop_dir</span><span class="s2">&quot;</span>/<span class="w"> </span>
+<span class="c1"># Parcourir chaque fichier, desktop dans le répertoire utilisateur</span>
+<span class="k">for</span><span class="w"> </span>desktop_file<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$client_desktop_dir</span><span class="s2">&quot;</span>/*,desktop:<span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="c1"># Vérifier si le fichier contient &quot;remmina&quot; dans son</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$desktop_file</span><span class="s2">&quot;</span><span class="w"> </span>!<span class="o">=</span><span class="w"> </span>*<span class="s2">&quot;remmina&quot;</span>*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="c1"># Ajouter NoDisplay-true si ce n&#39;est pas déjà fait</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>grep<span class="w"> </span>-q<span class="w"> </span><span class="s2">&quot;^NoDisplay=true&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$desktop_file</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;NoDisplay=true&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$desktop_file</span><span class="s2">&quot;</span>
+<span class="w">        </span><span class="k">fi</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="k">done</span><span class="w"> </span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Les fichiers .desktop ont été modifiés pour l&#39;utilisateur client.&quot;</span>
+</code></pre></div>
+- <strong>Rendre le fichier éxecutable :</strong></p>
+<div class="codehilite"><pre><span></span><code>`chmod +x /home/client/modif-client-app-NoD.sh`
+</code></pre></div>
+
+<ul>
+<li>
+<p><strong>Éxecuter le fichiers :</strong></p>
+<p><code>./chmod +x /home/client/modif-client-app-NoD.sh</code></p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">résultat attendue</p>
+<p>Dans le terminal, un message doit apparaître : "Les fichiers .desktop ont été modifiés pour l’utilisateur client."</p>
 </div>
 <hr />
 <h2 id="configuration-avancee">Configuration avancée<a class="headerlink" href="#configuration-avancee" title="Permanent link">&para;</a></h2>
