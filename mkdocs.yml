@@ -12,7 +12,7 @@ theme:
     text: Roboto
     code: Roboto Mono
   logo: assets/logo.svg  # facultatif : remplace par ton logo
-  favicon: assets/favicon.ico  # facultatif
+  favicon: assets/favicon.png  # facultatif
   features:
     - navigation.tabs
     - navigation.sections
