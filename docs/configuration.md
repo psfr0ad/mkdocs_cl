@@ -151,10 +151,13 @@ X-GNOME-Autostart-enabled=true
 
 # Répertoire contenant les fichiers . desktop pour l'utilisateur actuel
 client_desktop_dir="$HOME/. local/share/applications"
+
 # Créer le répertotre s'il n'existe pas
 mkdir -p "$client_desktop_dir"
+
 # Copier les fichiers , desktop du répertoire système vers le répertotre utilisat
 cp /usr/share/applications/*. desktop "$client_desktop_dir"/ 
+
 # Parcourir chaque fichier, desktop dans le répertoire utilisateur
 for desktop_file in "$client_desktop_dir"/*,desktop: do
     # Vérifier si le fichier contient "remmina" dans son
@@ -181,7 +184,59 @@ echo "Les fichiers .desktop ont été modifiés pour l'utilisateur client."
     Dans le terminal, un message doit apparaître : "Les fichiers .desktop ont été modifiés pour l’utilisateur client."
 
 !!! warning "Important"
-    Enfin, remettez NoDisplay=true dans les fichiers .desktop que vous souhaitez rendre visibles sur le bureau de l'utilisateur concerné.
+    Enfin, remettez `NoDisplay=true` dans les fichiers .desktop que vous souhaitez rendre visibles sur le bureau de l'utilisateur concerné.
+
+3) Création de l'application personnalisée pour le lien Firefox.
+
+- **Créer le fichiers /firefox_url.desktop :** 
+
+    `sudo nano /home/client/.local/share/applications/firefox_url.desktop`
+
+- **Ajouter ceci dans le fichier :**
+
+```bash
+[Desktop Entry]
+Type=Application
+Name=Firefox_URL
+Exec=firefox --new-window "votre_lien"
+Terminal=false
+Icon=firefox-esr
+StartUpNotify=true
+```
+
+- **Changer le propriétaire et le groupe du fichier :**
+
+    `sudo chown client:client /home/client/.local/share/applications/firefox_url.desktop`
+
+- **Rendre le fichier éxecutable :**
+
+    `sudo chmod +x  /home/client/.local/share/applications/firefox_url.desktop`
+
+4) Création de l’application Logout (qui permettra de se déconnecter du client léger)
+
+- **Créer le fichier `/logout.desktop`**
+
+    `sudo nano /home/client/.local/share/applications/logout.desktop`
+
+- **Ajouter ceci dans le fichier :**
+
+```bash
+[Desktop Entry]
+Type=Application
+Name=Logout
+Exec=gnome-session-quit --logout --no-prompt
+Terminal=false
+Icon=system-log-out
+StartUpNotify=true
+```
+
+- **Changer le propriétaire et le groupe du fichier :**
+
+    `sudo chown client:client  /home/client/.local/share/applications/logout.desktop`
+
+- **Rendre le fichier éxecutable :**
+
+    `sudo chmod +x   /home/client/.local/share/applications/logout.desktop`
 ---
 
 ## Configuration avancée
