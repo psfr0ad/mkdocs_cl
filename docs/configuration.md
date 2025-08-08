@@ -24,9 +24,8 @@ Configurer correctement un client léger Debian est une étape cruciale pour gar
 Cette section vous guidera à travers les principales étapes de configuration, notamment :
 
 - L’optimisation de l’environnement système
-- La mise en place d’une session légère (LXDE, XFCE, ou autre)
+- La mise en place d’une session légère (Gnome)
 - La gestion des connexions distantes (RDP, VNC, SSH)
-- La configuration réseau (fixe ou DHCP)
 - Le durcissement de la sécurité système
 
 !!! info "Public visé"
