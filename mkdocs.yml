@@ -4,27 +4,40 @@ site_author: Leonard Bonnet
 
 theme:
   name: material
+  language: fr
   palette:
-    scheme: default
-    primary: blue
-    accent: light blue
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Passer en mode sombre
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Passer en mode clair
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/images/favicon.png 
-  logo: assets/images/logo.png  
+  favicon: assets/images/favicon.png
+  logo: assets/images/logo.png
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.top
     - toc.integrate
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
     - content.code.copy
     - content.code.annotate
-    - content.action.edit
+    - content.tabs.link
     - header.autohide
 
 nav:
-  - Accueil: index.md
+  - Accueil: index
   - Installation: installation
   - Configuration: configuration
   - Sécurité: securite
@@ -33,25 +46,31 @@ nav:
 
 plugins:
   - search
+  - minify:
+      minify_html: true
 
 extra_css:
-  - |
-    <style>
-      /* Agrandir le logo */
-      .md-header-logo {
-          height: 150px;  
-          width: auto;   
-      }
-    </style>
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
 
 markdown_extensions:
   - admonition
-  - codehilite
-  - pymdownx.highlight
+  - codehilite:
+      guess_lang: false
+  - pymdownx.highlight:
+      anchor_linenums: true
   - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - toc:
       permalink: true
+  - footnotes
+  - attr_list
+  - md_in_html
