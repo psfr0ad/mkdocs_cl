@@ -764,9 +764,8 @@ Cette page est destinée à détailler les étapes nécessaires pour configurer 
 <p>Cette section vous guidera à travers les principales étapes de configuration, notamment :</p>
 <ul>
 <li>L’optimisation de l’environnement système</li>
-<li>La mise en place d’une session légère (LXDE, XFCE, ou autre)</li>
+<li>La mise en place d’une session légère (Gnome)</li>
 <li>La gestion des connexions distantes (RDP, VNC, SSH)</li>
-<li>La configuration réseau (fixe ou DHCP)</li>
 <li>Le durcissement de la sécurité système</li>
 </ul>
 <div class="admonition info">
@@ -829,14 +828,14 @@ Ne jamais donner sudo à un utilisateur final non technique</p>
 <p>Activer des politiques de mots de passe si nécessaire (pam_pwquality, chage, etc.)</p>
 <hr />
 <h2 id="configuration-des-applications-desktop-et-sh">Configuration des applications .desktop et .sh :<a class="headerlink" href="#configuration-des-applications-desktop-et-sh" title="Permanent link">&para;</a></h2>
-<p>1) Configuration d'un autostart d'application ici pour Remmina 
-- créer le répertoire: </p>
-<div class="codehilite"><pre><span></span><code>`sudo mkdir -p /home/client/.config/autostart`
-</code></pre></div>
-
+<p>1) Configuration d'un autostart d'application ici pour Remmina :</p>
 <ul>
 <li>
-<p><strong>créer le fichiers:</strong></p>
+<p><strong>Créer le répertoirev :</strong></p>
+<p><code>sudo mkdir -p /home/client/.config/autostart</code></p>
+</li>
+<li>
+<p><strong>Créer le fichiers:</strong></p>
 <p><code>sudo nano /home/client/.config/autostart/remmina.desktop</code></p>
 </li>
 <li>
@@ -864,7 +863,7 @@ X-GNOME-Autostart-enabled<span class="o">=</span><span class="nb">true</span>
 <p>2) Configuration d'un fichier .sh pour rendre les applications invisbles et inaccessible depuis le bureau avec <code>Nodisplay=true</code> :</p>
 <ul>
 <li>
-<p><strong>créer le fichier suivant :</strong></p>
+<p><strong>Créer le fichier suivant :</strong></p>
 <p><code>sudo nano /home/client/modif-client-app-NoD.sh</code></p>
 </li>
 <li>
