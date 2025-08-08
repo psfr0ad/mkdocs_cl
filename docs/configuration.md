@@ -106,7 +106,7 @@ Activer des politiques de mots de passe si nécessaire (pam_pwquality, chage, et
 
 ---
 
-## **Configuration des applications .desktop et .sh :**
+### **Configuration des applications .desktop et .sh :**
 
 1) Configuration d'un autostart d'application ici pour Remmina :
 
