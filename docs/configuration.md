@@ -135,6 +135,8 @@ X-GNOME-Autostart-enabled=true
 
 `chmod +x /home/client/.config/autostart/remmina.desktop`
 
+!!! info "résultat attendue"
+    Lorsque vous vous connecterez à l'utilisateur `client`, Remmina se lancera automatiquement sur le bureau, sans aucune action de votre part, prêt à l'emploi.
 
 
 ---

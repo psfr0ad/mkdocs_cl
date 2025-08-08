@@ -828,9 +828,29 @@ Ne jamais donner sudo à un utilisateur final non technique</p>
 <p>Bloquer les accès à des fichiers sensibles (/etc, /var/log, etc.)</p>
 <p>Activer des politiques de mots de passe si nécessaire (pam_pwquality, chage, etc.)</p>
 <hr />
-<h2 id="configuration-reseau">Configuration réseau<a class="headerlink" href="#configuration-reseau" title="Permanent link">&para;</a></h2>
-<!-- Contenu à venir -->
-
+<h2 id="configuration-des-appliations-desktop-et-sh">Configuration des appliations .desktop et .sh :<a class="headerlink" href="#configuration-des-appliations-desktop-et-sh" title="Permanent link">&para;</a></h2>
+<p>1) Configuration d'un autostart d'application ici pour Remmina 
+- créer le répertoire: </p>
+<p><code>sudo mkdir -p /home/client/.config/autostart</code></p>
+<ul>
+<li>créer le fichiers:</li>
+</ul>
+<p><code>sudo nano /home/client/.config/autostart/remmina.desktop</code></p>
+<ul>
+<li>Ajouter ceci dans le fichiers :</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>Desktop<span class="w"> </span>Entry<span class="o">]</span>
+<span class="nv">Type</span><span class="o">=</span>Application
+<span class="nv">Name</span><span class="o">=</span>Remmina
+<span class="nv">Exec</span><span class="o">=</span>/usr/bin/remmina
+<span class="nv">Hidden</span><span class="o">=</span><span class="nb">false</span>
+<span class="nv">NoDisplay</span><span class="o">=</span><span class="nb">false</span>
+X-GNOME-Autostart-enabled<span class="o">=</span><span class="nb">true</span>
+</code></pre></div>
+<ul>
+<li>Rendre le fichiers éxecutable :</li>
+</ul>
+<p><code>chmod +x /home/client/.config/autostart/remmina.desktop</code></p>
 <hr />
 <h2 id="configuration-avancee">Configuration avancée<a class="headerlink" href="#configuration-avancee" title="Permanent link">&para;</a></h2>
 <!-- Contenu à venir -->
