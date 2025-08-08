@@ -51,7 +51,92 @@ Remmina est un client de bureau à distance compatible RDP, VNC, SSH, etc. Il es
 
 `sudo apt install remmina`
 
+**Installation de l'extension pour restreindre le bureau client :**
+
+Gnome shell extension manager et une application quui vas permettre l'installation d'extension pour gnome.
+
+`sudo apt install gnome-shell-extension-manager`
+
+Allez dans recherche et taper Just Perfection une fois trouver et installer desactiver tout  bureaux allez dans personaliser et ne laisser que raccourcie bureau pour voir les deux application ce faire.
+
 ---
+## 🎛️ Installation de l'extension pour restreindre le bureau client
+
+Dans un environnement client léger, il est souvent nécessaire de **limiter l’accès à certaines fonctionnalités de l’environnement graphique** pour améliorer la sécurité, la stabilité, ou simplifier l’expérience utilisateur.
+
+L'extension **Just Perfection** permet de personnaliser à l'extrême l'interface Gnome et de masquer les éléments inutiles.
+
+---
+
+### 🧩 1. Installer l’extension manager
+
+Commencez par installer l’application **Gnome Shell Extension Manager**, qui permet d’explorer et de gérer les extensions directement depuis le bureau.
+
+`sudo apt install gnome-shell-extension-manager`
+
+Une fois installée, lancez-la via le menu d’applications ou avec la commande :
+
+`gnome-shell-extension-manager` 
+
+🔍 2. Rechercher l’extension "Just Perfection"
+Dans l’Extension Manager :
+
+Allez dans l’onglet "Browse" (ou "Parcourir").
+
+Recherchez "Just Perfection" dans la barre de recherche.
+
+Cliquez sur Install pour l’installer.
+
+🧼 3. Désactiver les éléments du bureau
+Après installation :
+
+Allez dans l’onglet "Installed"
+
+Cliquez sur Just Perfection
+
+Cliquez sur "Personnaliser"
+
+Dans les options, désactivez tout ce que vous ne souhaitez pas afficher, notamment :
+
+Activités
+
+Barre supérieure
+
+Menu utilisateur
+
+Dock
+
+Bouton d’alimentation
+
+Etc.
+
+Laissez uniquement "Show Desktop Icons" ou "Desktop Shortcuts" activé, pour que les raccourcis du bureau restent visibles (par exemple, Remmina ou Firefox).
+
+!!! info "Conseil"
+    Pensez à tester la session avec un utilisateur non-administrateur pour valider le rendu final avant de déployer à grande échelle.
+
+Avec Just Perfection, vous obtenez un bureau épuré, sécurisé, et parfaitement adapté à une utilisation client léger.
+
+---
+
+### ✅ Résultat
+
+Tu obtiens :
+
+- Un bureau **sans distractions**
+- Un accès réduit aux fonctionnalités système
+- Une meilleure UX pour les utilisateurs peu techniques
+
+---
+
+### 💡 Tu veux aller plus loin ?
+
+Je peux t’ajouter une section sur :
+
+- Le verrouillage du clic droit
+- Le lancement automatique d'applications
+- La suppression de la barre des tâches
+
 
 
 
