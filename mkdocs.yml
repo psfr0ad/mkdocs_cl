@@ -1,18 +1,27 @@
-
-
 site_name: Client Léger Debian
 site_description: Documentation pour configurer un client léger Debian en ligne de commande
 site_author: Leonard Bonnet
 
-
 theme:
   name: material
   palette:
-    primary: 'blue'
-    accent: 'light blue'
+    scheme: default
+    primary: blue
+    accent: light blue
   font:
     text: Roboto
     code: Roboto Mono
+  logo: assets/logo.svg  # facultatif : remplace par ton logo
+  favicon: assets/favicon.ico  # facultatif
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+    - content.code.annotate
+    - content.action.edit
+    - header.autohide
 
 nav:
   - Accueil: index.md
@@ -38,6 +47,11 @@ extra_css:
 markdown_extensions:
   - admonition
   - codehilite
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
   - toc:
       permalink: true
-
