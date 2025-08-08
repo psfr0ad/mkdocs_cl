@@ -94,8 +94,8 @@ L'utilisateur ne doit faire partie que de groupes standards comme client, users,
 
 
 !!! warning "Important"
-Ne retirez pas vos propres droits sudo si vous êtes connecté avec cet utilisateur !
-Assurez-vous d’avoir un accès administrateur via un autre compte.
+    Ne retirez pas vos propres droits sudo si vous êtes connecté avec cet utilisateur !
+    Assurez-vous d’avoir un accès administrateur via un autre compte.
 
 ---
 

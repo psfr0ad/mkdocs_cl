@@ -788,13 +788,45 @@ Cette page est destinée à détailler les étapes nécessaires pour configurer 
 <p><em>Prenez le temps de lire chaque étape avant de l’appliquer à votre système réel.</em></p>
 </blockquote>
 <hr />
-<h2 id="configuration-systeme">Configuration système<a class="headerlink" href="#configuration-systeme" title="Permanent link">&para;</a></h2>
-<!-- Contenu à venir -->
-
-<hr />
 <h2 id="configuration-utilisateur">Configuration utilisateur<a class="headerlink" href="#configuration-utilisateur" title="Permanent link">&para;</a></h2>
-<!-- Contenu à venir -->
-
+<p>Dans un environnement client léger, il est important de créer un utilisateur dédié et de <strong>limiter ses droits</strong> pour garantir la sécurité et le bon fonctionnement du système.</p>
+<p>Cette section vous guide pour :</p>
+<ul>
+<li>Créer un nouvel utilisateur</li>
+<li>Définir son mot de passe</li>
+<li>Restreindre ses privilèges (suppression du droit <code>sudo</code>)</li>
+<li>Appliquer les bonnes pratiques de sécurité</li>
+</ul>
+<hr />
+<h2 id="creation-de-lutilisateur">🧑‍💻 Création de l'utilisateur<a class="headerlink" href="#creation-de-lutilisateur" title="Permanent link">&para;</a></h2>
+<p>Nous allons créer un utilisateur standard, par exemple nommé <code>client</code>.</p>
+<p><code>sudo adduser client</code></p>
+<p>Le système vous demandera :</p>
+<ul>
+<li>
+<p>Mot de passe</p>
+</li>
+<li>
+<p>Informations facultatives (vous pouvez les laisser vides)</p>
+</li>
+</ul>
+<p>🔐 Retirer les droits sudo</p>
+<p>Par défaut, l’utilisateur n’a pas accès à sudo.</p>
+<p>Mais si vous l’avez ajouté à un groupe comme sudo ou adm par erreur, vous pouvez le retirer :</p>
+<p><code>sudo deluser client sudo</code></p>
+<p>Vérifiez qu’il n’appartient à aucun groupe privilégié :</p>
+<p><code>groups client</code></p>
+<p>L'utilisateur ne doit faire partie que de groupes standards comme client, users, etc.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+</div>
+<p>Ne retirez pas vos propres droits sudo si vous êtes connecté avec cet utilisateur !
+Assurez-vous d’avoir un accès administrateur via un autre compte.</p>
+<hr />
+<p>✅ Bonnes pratiques
+Ne jamais donner sudo à un utilisateur final non technique</p>
+<p>Bloquer les accès à des fichiers sensibles (/etc, /var/log, etc.)</p>
+<p>Activer des politiques de mots de passe si nécessaire (pam_pwquality, chage, etc.)</p>
 <hr />
 <h2 id="configuration-reseau">Configuration réseau<a class="headerlink" href="#configuration-reseau" title="Permanent link">&para;</a></h2>
 <!-- Contenu à venir -->
