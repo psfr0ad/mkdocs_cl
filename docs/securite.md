@@ -95,6 +95,7 @@ sudo setfacl -m u:client:0 /usr/bin/hciconfig
 ```
 
 Explications :
+
 `bluetoothctl` : Empêche l'utilisateur client de gérer les périphériques Bluetooth.
 
 `hciconfig` : Empêche l'utilisateur client de configurer les interfaces Bluetooth.
