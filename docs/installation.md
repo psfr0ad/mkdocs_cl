@@ -19,6 +19,7 @@ Ici, vous trouverez toutes les étapes nécessaires pour installer et configurer
 
 **Commencez par mettre à jour la liste des paquets et le système :**
 
+```bash
 sudo apt update && sudo apt upgrade -y
 
 Debian utilise un fichier appelé /etc/apt/sources.list pour définir les dépôts depuis lesquels il télécharge les logiciels.
