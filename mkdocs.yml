@@ -11,8 +11,8 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  logo: assets/logo.svg  # facultatif : remplace par ton logo
-  favicon: assets/favicon.png  # facultatif
+  logo: assets/logo.svg  
+  favicon: assets/favicon.png  
   features:
     - navigation.tabs
     - navigation.sections
@@ -25,17 +25,10 @@ theme:
 
 nav:
   - Accueil: index.md
-  - Installation:
-      - Mise à jour: installation
-      - Paquets essentiels: installation
-  - Configuration:
-      - Session légère: configuration
-  - Sécurité: 
-      - droit: securite
-      - ACL: securite
-  - Utilisation:
-      - Prise en main: utilisation
-      - Avancée: utilisation
+  - Installation: installation
+  - Configuration: configuration
+  - Sécurité: securite
+  - Utilisation: utilisation
   - Ressources: resources
 
 plugins:

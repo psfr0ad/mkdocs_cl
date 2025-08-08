@@ -27,7 +27,6 @@ Bienvenue dans cette documentation dédiée à la mise en place d'un **client l�
 - **[Installation et configuration](installation.md)** : Installation de Debian minimale et configuration du client léger.
 - **[Utilisation quotidienne](utilisation.md)** : Commandes et outils pour un usage efficace.
 - **[Sécurité et maintenance](securite.md)** : Bonnes pratiques pour sécuriser et maintenir le client léger.
-- **[Dépannage](depannage.md)** : Résolution des problèmes courants.
 
 ---
 
