@@ -108,7 +108,7 @@ Activer des politiques de mots de passe si nécessaire (pam_pwquality, chage, et
 
 ---
 
-## Configuration des appliations .desktop et .sh :
+## Configuration des applications .desktop et .sh :
 
 1) Configuration d'un autostart d'application ici pour Remmina 
 - créer le répertoire: 
@@ -237,6 +237,7 @@ StartUpNotify=true
 - **Rendre le fichier éxecutable :**
 
     `sudo chmod +x   /home/client/.local/share/applications/logout.desktop`
+
 ---
 
 ## Configuration avancée
