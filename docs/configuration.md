@@ -113,11 +113,11 @@ Activer des politiques de mots de passe si nécessaire (pam_pwquality, chage, et
 1) Configuration d'un autostart d'application ici pour Remmina 
 - créer le répertoire: 
 
- `sudo mkdir -p /home/client/.config/autostart`
+    `sudo mkdir -p /home/client/.config/autostart`
 
 - **créer le fichiers:**
  
-`sudo nano /home/client/.config/autostart/remmina.desktop`
+    `sudo nano /home/client/.config/autostart/remmina.desktop`
 
 - **Ajouter ceci dans le fichiers :**
 
@@ -133,7 +133,7 @@ X-GNOME-Autostart-enabled=true
 
 - **Rendre le fichiers éxecutable :**
 
-`chmod +x /home/client/.config/autostart/remmina.desktop`
+    `chmod +x /home/client/.config/autostart/remmina.desktop`
 
 !!! info "résultat attendue"
     Lorsque vous vous connecterez à l'utilisateur `client`, Remmina se lancera automatiquement sur le bureau, sans aucune action de votre part, prêt à l'emploi.
@@ -142,7 +142,7 @@ X-GNOME-Autostart-enabled=true
 
 - **créer le fichier suivant :**
 
-` sudo nano /home/client/modif-client-app-NoD.sh`
+    ` sudo nano /home/client/modif-client-app-NoD.sh`
 
 - **Ajouter ceci dans le fichier :**
 
@@ -154,7 +154,7 @@ client_desktop_dir="$HOME/. local/share/applications"
 # Créer le répertotre s'il n'existe pas
 mkdir -p "$client_desktop_dir"
 # Copier les fichiers , desktop du répertoire système vers le répertotre utilisat
-cp /usr/share/applicatfons/*. desktop "$nimrod_desktop_dir"/ 
+cp /usr/share/applications/*. desktop "$client_desktop_dir"/ 
 # Parcourir chaque fichier, desktop dans le répertoire utilisateur
 for desktop_file in "$client_desktop_dir"/*,desktop: do
     # Vérifier si le fichier contient "remmina" dans son
