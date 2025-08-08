@@ -798,12 +798,21 @@ sudo<span class="w"> </span>setfacl<span class="w"> </span>-m<span class="w"> </
 <p><code>gnome-extensions-app</code> et <code>gnome-extensions</code> : Empêchent l'utilisateur client de gérer les extensions GNOME.</p>
 <p><code>apt</code> et <code>dpkg</code> : Empêchent l'utilisateur client d'installer, de mettre à jour ou de supprimer des paquets avec APT et DPKG.</p>
 <p><code>gnome-shell-extension-prefs</code> : Empêche l'utilisateur client de modifier les préférences des extensions GNOME.</p>
-<p><strong>Commandes sensibles à traiter avec précaution</strong>
-Ces commandes doivent être appliquées avec attention. Elles restreignent l'accès à des outils qui peuvent modifier l'environnement système de manière significative.</p>
+<p><strong>Commandes sensibles à traiter avec précaution</strong></p>
+<p>Ces commandes doivent être appliquées avec attention. Elles restreignent l'accès à des outils qui peuvent modifier l'environnement système de manière significative.</p>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
 <p>Ne laissez pas ces commandes accessibles à des utilisateurs non autorisés. Ces outils peuvent affecter le système global.</p>
 </div>
+<p><strong>Désactivation du Bluetooth</strong></p>
+<p>Si vous souhaitez désactiver l'accès au Bluetooth pour l'utilisateur client, vous pouvez également limiter l'accès aux outils Bluetooth avec les commandes suivantes :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>setfacl<span class="w"> </span>-m<span class="w"> </span>u:client:0<span class="w"> </span>/usr/bin/bluetoothctl
+
+sudo<span class="w"> </span>setfacl<span class="w"> </span>-m<span class="w"> </span>u:client:0<span class="w"> </span>/usr/bin/hciconfig
+</code></pre></div>
+<p>Explications :
+<code>bluetoothctl</code> : Empêche l'utilisateur client de gérer les périphériques Bluetooth.</p>
+<p><code>hciconfig</code> : Empêche l'utilisateur client de configurer les interfaces Bluetooth.</p>
 <p><strong>Vérification des permissions :</strong></p>
 <p>Après avoir appliqué les ACL, il est crucial de vérifier que l'utilisateur client ne peut pas exécuter les commandes restreintes. Vous pouvez tester les restrictions avec les commandes suivantes :</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>-u<span class="w"> </span>client<span class="w"> </span>gnome-control-center
@@ -814,6 +823,10 @@ sudo<span class="w"> </span>-u<span class="w"> </span>client<span class="w"> </s
 
 sudo<span class="w"> </span>-u<span class="w"> </span>client<span class="w"> </span>gnome-extensions-app
 </code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">attendue</p>
+<p>permission denied</p>
+</div>
 <hr />
 <h2 id="mises-a-jour-de-securite">Mises à jour de sécurité<a class="headerlink" href="#mises-a-jour-de-securite" title="Permanent link">&para;</a></h2>
 <!-- Contenu à venir -->
