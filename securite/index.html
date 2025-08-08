@@ -770,16 +770,51 @@
 <p>Nous allons maintenant limiter l'accès à plusieurs applications de bureau essentielles, telles que le <strong>centre de contrôle GNOME</strong>, le <strong>terminal GNOME</strong>, et le <strong>gestionnaire de logiciels GNOME</strong>.</p>
 <h3 id="commandes-pour-limiter-lacces">Commandes pour limiter l'accès<a class="headerlink" href="#commandes-pour-limiter-lacces" title="Permanent link">&para;</a></h3>
 <p>Les commandes suivantes utiliseront <code>setfacl</code> pour <strong>enlever les permissions d'exécution</strong> pour l'utilisateur <code>client</code> sur certaines applications.</p>
-<p><div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>setfacl<span class="w"> </span>-m<span class="w"> </span>u:client:0<span class="w"> </span>/usr/bin/gnome-center-control
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>setfacl<span class="w"> </span>-m<span class="w"> </span>u:client:0<span class="w"> </span>/usr/bin/gnome-center-control
 
 sudo<span class="w"> </span>setfacl<span class="w"> </span>-m<span class="w"> </span>u:client:0<span class="w"> </span>/usr/bin/gnome-terminal
 
 sudo<span class="w"> </span>setfacl<span class="w"> </span>-m<span class="w"> </span>u:client:0<span class="w"> </span>/usr/bin/gnome-software
 </code></pre></div>
-- Explications :</p>
+<ul>
+<li>Explications :</li>
+</ul>
 <p><code>gnome-center-control</code> : Empêche l'utilisateur client d'ouvrir le centre de contrôle GNOME.</p>
 <p><code>gnome-terminal</code>: Empêche l'utilisateur client d'ouvrir un terminal GNOME.</p>
-<h2 id="gnome-software-empeche-lutilisateur-client-dacceder-au-gestionnaire-de-logiciels-gnome-pour-installer-ou-mettre-a-jour-des-applications"><code>gnome-software</code>: Empêche l'utilisateur client d'accéder au gestionnaire de logiciels GNOME pour installer ou mettre à jour des applications.<a class="headerlink" href="#gnome-software-empeche-lutilisateur-client-dacceder-au-gestionnaire-de-logiciels-gnome-pour-installer-ou-mettre-a-jour-des-applications" title="Permanent link">&para;</a></h2>
+<p><code>gnome-software</code>: Empêche l'utilisateur client d'accéder au gestionnaire de logiciels GNOME pour installer ou mettre à jour des applications.</p>
+<h3 id="commandes-sensibles">Commandes sensibles<a class="headerlink" href="#commandes-sensibles" title="Permanent link">&para;</a></h3>
+<p>Certaines applications et outils système doivent être particulièrement surveillés et restreints, car ils permettent de gérer des configurations avancées ou des éléments essentiels du système. Voici une liste de commandes supplémentaires pour limiter l'accès à ces outils sensibles.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>setfacl<span class="w"> </span>-m<span class="w"> </span>u:client:0<span class="w"> </span>/usr/bin/gnome-extensions-app
+
+sudo<span class="w"> </span>setfacl<span class="w"> </span>-m<span class="w"> </span>u:client:0<span class="w"> </span>/usr/bin/gnome-extensions
+
+sudo<span class="w"> </span>setfacl<span class="w"> </span>-m<span class="w"> </span>u:client:0<span class="w"> </span>/usr/bin/apt
+
+sudo<span class="w"> </span>setfacl<span class="w"> </span>-m<span class="w"> </span>u:client:0<span class="w"> </span>/usr/bin/dpkg
+
+sudo<span class="w"> </span>setfacl<span class="w"> </span>-m<span class="w"> </span>u:client:0<span class="w"> </span>/usr/bin/gnome-shell-extension-prefs
+</code></pre></div>
+<p>-Explications :</p>
+<p><code>gnome-extensions-app</code> et <code>gnome-extensions</code> : Empêchent l'utilisateur client de gérer les extensions GNOME.</p>
+<p><code>apt</code> et <code>dpkg</code> : Empêchent l'utilisateur client d'installer, de mettre à jour ou de supprimer des paquets avec APT et DPKG.</p>
+<p><code>gnome-shell-extension-prefs</code> : Empêche l'utilisateur client de modifier les préférences des extensions GNOME.</p>
+<p><strong>Commandes sensibles à traiter avec précaution</strong>
+Ces commandes doivent être appliquées avec attention. Elles restreignent l'accès à des outils qui peuvent modifier l'environnement système de manière significative.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Ne laissez pas ces commandes accessibles à des utilisateurs non autorisés. Ces outils peuvent affecter le système global.</p>
+</div>
+<p><strong>Vérification des permissions :</strong></p>
+<p>Après avoir appliqué les ACL, il est crucial de vérifier que l'utilisateur client ne peut pas exécuter les commandes restreintes. Vous pouvez tester les restrictions avec les commandes suivantes :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>-u<span class="w"> </span>client<span class="w"> </span>gnome-control-center
+
+sudo<span class="w"> </span>-u<span class="w"> </span>client<span class="w"> </span>gnome-terminal
+
+sudo<span class="w"> </span>-u<span class="w"> </span>client<span class="w"> </span>gnome-software
+
+sudo<span class="w"> </span>-u<span class="w"> </span>client<span class="w"> </span>gnome-extensions-app
+</code></pre></div>
+<hr />
 <h2 id="mises-a-jour-de-securite">Mises à jour de sécurité<a class="headerlink" href="#mises-a-jour-de-securite" title="Permanent link">&para;</a></h2>
 <!-- Contenu à venir -->
 
