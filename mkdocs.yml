@@ -6,35 +6,43 @@ theme:
   name: material
   language: fr
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: amber
       toggle:
-        icon: material/weather-sunny
+        icon: material/lightbulb
         name: Passer en mode sombre
-    - scheme: slate
-      primary: indigo
-      accent: indigo
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: amber
       toggle:
-        icon: material/weather-night
+        icon: material/lightbulb-outline
         name: Passer en mode clair
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: 'Roboto'
+    code: 'Roboto Mono'
   favicon: assets/images/favicon.png
   logo: assets/images/logo.png
+  icon:
+    repo: fontawesome/brands/github
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
+    - navigation.expand
     - navigation.top
     - toc.integrate
     - navigation.indexes
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
     - header.autohide
+    - announce.dismiss
 
 nav:
   - Accueil: index
@@ -48,6 +56,10 @@ plugins:
   - search
   - minify:
       minify_html: true
+  - git-revision-date-localized:
+      type: timeago
+      timezone: Europe/Paris
+      locale: fr
 
 extra_css:
   - stylesheets/extra.css
@@ -56,21 +68,39 @@ extra_javascript:
   - javascripts/extra.js
 
 markdown_extensions:
+  - abbr
   - admonition
-  - codehilite:
-      guess_lang: false
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.superfences
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
   - toc:
       permalink: true
-  - footnotes
-  - attr_list
-  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      base_path: docs
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
