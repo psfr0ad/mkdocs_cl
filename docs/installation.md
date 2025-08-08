@@ -36,7 +36,7 @@ deb-src http://security.debian.org/debian-security stable-security main contrib 
 
 deb http://deb.debian.org/debian/ stable-updates main contrib non-free
 
-deb-src http://deb.debian.org/debian/ stable-updates main contrib non-free`
+deb-src http://deb.debian.org/debian/ stable-updates main contrib non-free
 ```
 
 
