@@ -109,12 +109,13 @@ Activer des politiques de mots de passe si nécessaire (pam_pwquality, chage, et
 
 ## Configuration des applications .desktop et .sh :
 
-1) Configuration d'un autostart d'application ici pour Remmina 
-- créer le répertoire: 
+1) Configuration d'un autostart d'application ici pour Remmina :
+
+- **Créer le répertoirev :**
 
     `sudo mkdir -p /home/client/.config/autostart`
 
-- **créer le fichiers:**
+- **Créer le fichiers:**
  
     `sudo nano /home/client/.config/autostart/remmina.desktop`
 
@@ -139,7 +140,7 @@ X-GNOME-Autostart-enabled=true
 
 2) Configuration d'un fichier .sh pour rendre les applications invisbles et inaccessible depuis le bureau avec `Nodisplay=true` :
 
-- **créer le fichier suivant :**
+- **Créer le fichier suivant :**
 
     ` sudo nano /home/client/modif-client-app-NoD.sh`
 
