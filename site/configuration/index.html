@@ -871,7 +871,7 @@ X-GNOME-Autostart-enabled<span class="o">=</span><span class="nb">true</span>
 <p><strong>Ajouter ceci dans le fichier :</strong></p>
 </li>
 </ul>
-<p><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># Répertoire contenant les fichiers . desktop pour l&#39;utilisateur actuel</span>
 <span class="nv">client_desktop_dir</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/. local/share/applications&quot;</span>
@@ -892,11 +892,11 @@ cp<span class="w"> </span>/usr/share/applications/*.<span class="w"> </span>desk
 
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Les fichiers .desktop ont été modifiés pour l&#39;utilisateur client.&quot;</span>
 </code></pre></div>
-- <strong>Rendre le fichier éxecutable :</strong></p>
-<div class="codehilite"><pre><span></span><code>`chmod +x /home/client/modif-client-app-NoD.sh`
-</code></pre></div>
-
 <ul>
+<li>
+<p><strong>Rendre le fichier éxecutable :</strong></p>
+<p><code>chmod +x /home/client/modif-client-app-NoD.sh</code></p>
+</li>
 <li>
 <p><strong>Éxecuter le fichiers :</strong></p>
 <p><code>./chmod +x /home/client/modif-client-app-NoD.sh</code></p>
