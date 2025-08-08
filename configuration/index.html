@@ -875,10 +875,13 @@ X-GNOME-Autostart-enabled<span class="o">=</span><span class="nb">true</span>
 
 <span class="c1"># Répertoire contenant les fichiers . desktop pour l&#39;utilisateur actuel</span>
 <span class="nv">client_desktop_dir</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/. local/share/applications&quot;</span>
+
 <span class="c1"># Créer le répertotre s&#39;il n&#39;existe pas</span>
 mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$client_desktop_dir</span><span class="s2">&quot;</span>
+
 <span class="c1"># Copier les fichiers , desktop du répertoire système vers le répertotre utilisat</span>
 cp<span class="w"> </span>/usr/share/applications/*.<span class="w"> </span>desktop<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$client_desktop_dir</span><span class="s2">&quot;</span>/<span class="w"> </span>
+
 <span class="c1"># Parcourir chaque fichier, desktop dans le répertoire utilisateur</span>
 <span class="k">for</span><span class="w"> </span>desktop_file<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$client_desktop_dir</span><span class="s2">&quot;</span>/*,desktop:<span class="w"> </span><span class="k">do</span>
 <span class="w">    </span><span class="c1"># Vérifier si le fichier contient &quot;remmina&quot; dans son</span>
@@ -908,8 +911,64 @@ cp<span class="w"> </span>/usr/share/applications/*.<span class="w"> </span>desk
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
+<p>Enfin, remettez <code>NoDisplay=true</code> dans les fichiers .desktop que vous souhaitez rendre visibles sur le bureau de l'utilisateur concerné.</p>
 </div>
-<h2 id="enfin-remettez-nodisplaytrue-dans-les-fichiers-desktop-que-vous-souhaitez-rendre-visibles-sur-le-bureau-de-lutilisateur-concerne">Enfin, remettez NoDisplay=true dans les fichiers .desktop que vous souhaitez rendre visibles sur le bureau de l'utilisateur concerné.<a class="headerlink" href="#enfin-remettez-nodisplaytrue-dans-les-fichiers-desktop-que-vous-souhaitez-rendre-visibles-sur-le-bureau-de-lutilisateur-concerne" title="Permanent link">&para;</a></h2>
+<p>3) Création de l'application personnalisée pour le lien Firefox.</p>
+<ul>
+<li>
+<p><strong>Créer le fichiers /firefox_url.desktop :</strong> </p>
+<p><code>sudo nano /home/client/.local/share/applications/firefox_url.desktop</code></p>
+</li>
+<li>
+<p><strong>Ajouter ceci dans le fichier :</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>Desktop<span class="w"> </span>Entry<span class="o">]</span>
+<span class="nv">Type</span><span class="o">=</span>Application
+<span class="nv">Name</span><span class="o">=</span>Firefox_URL
+<span class="nv">Exec</span><span class="o">=</span>firefox<span class="w"> </span>--new-window<span class="w"> </span><span class="s2">&quot;votre_lien&quot;</span>
+<span class="nv">Terminal</span><span class="o">=</span><span class="nb">false</span>
+<span class="nv">Icon</span><span class="o">=</span>firefox-esr
+<span class="nv">StartUpNotify</span><span class="o">=</span><span class="nb">true</span>
+</code></pre></div>
+<ul>
+<li>
+<p><strong>Changer le propriétaire et le groupe du fichier :</strong></p>
+<p><code>sudo chown client:client /home/client/.local/share/applications/firefox_url.desktop</code></p>
+</li>
+<li>
+<p><strong>Rendre le fichier éxecutable :</strong></p>
+<p><code>sudo chmod +x  /home/client/.local/share/applications/firefox_url.desktop</code></p>
+</li>
+</ul>
+<p>4) Création de l’application Logout (qui permettra de se déconnecter du client léger)</p>
+<ul>
+<li>
+<p><strong>Créer le fichier <code>/logout.desktop</code></strong></p>
+<p><code>sudo nano /home/client/.local/share/applications/logout.desktop</code></p>
+</li>
+<li>
+<p><strong>Ajouter ceci dans le fichier :</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>Desktop<span class="w"> </span>Entry<span class="o">]</span>
+<span class="nv">Type</span><span class="o">=</span>Application
+<span class="nv">Name</span><span class="o">=</span>Logout
+<span class="nv">Exec</span><span class="o">=</span>gnome-session-quit<span class="w"> </span>--logout<span class="w"> </span>--no-prompt
+<span class="nv">Terminal</span><span class="o">=</span><span class="nb">false</span>
+<span class="nv">Icon</span><span class="o">=</span>system-log-out
+<span class="nv">StartUpNotify</span><span class="o">=</span><span class="nb">true</span>
+</code></pre></div>
+<ul>
+<li>
+<p><strong>Changer le propriétaire et le groupe du fichier :</strong></p>
+<p><code>sudo chown client:client  /home/client/.local/share/applications/logout.desktop</code></p>
+</li>
+<li>
+<p><strong>Rendre le fichier éxecutable :</strong></p>
+<h2 id="sudo-chmod-x-homeclientlocalshareapplicationslogoutdesktop"><code>sudo chmod +x   /home/client/.local/share/applications/logout.desktop</code><a class="headerlink" href="#sudo-chmod-x-homeclientlocalshareapplicationslogoutdesktop" title="Permanent link">&para;</a></h2>
+</li>
+</ul>
 <h2 id="configuration-avancee">Configuration avancée<a class="headerlink" href="#configuration-avancee" title="Permanent link">&para;</a></h2>
 <!-- Contenu à venir -->
 
