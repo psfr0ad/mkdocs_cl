@@ -168,6 +168,7 @@ done
 
 echo "Les fichiers .desktop ont été modifiés pour l'utilisateur client."
 ```
+
 - **Rendre le fichier éxecutable :**
 
     `chmod +x /home/client/modif-client-app-NoD.sh`
