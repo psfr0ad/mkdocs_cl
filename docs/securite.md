@@ -10,7 +10,7 @@ Cette section aborde les aspects essentiels pour sécuriser votre client léger 
 
 - [Gestion des utilisateurs](#gestion-des-utilisateurs)  
 - [Mises à jour de sécurité](#mises-à-jour-de-sécurité)  
-- [Pare-feu et protections](#pare-feu-et-protections)  
+- [Masquer les apps](#Masquer-et-désactiver-les-applications-restante)  
 
 ---
 !!! info danger "Danger"
@@ -176,11 +176,30 @@ Utilisez la commande netstat ou ss pour vérifier les services en écoute et les
 
 Cela vous permet de vérifier quels services sont accessibles depuis l'extérieur, et vous pouvez prendre des mesures pour fermer les ports non utilisés ou sécuriser les services ouverts.
 
+
+
 ---
 
-## Pare-feu et protections
+## Masquer et désactiver les applications restante 
 
-<!-- Contenu à venir -->
+
+Une fois que vous avez configuré et personnalisé votre environnement client léger, il est souvent nécessaire de **masquer** certaines applications du menu, ou même de les désactiver complètement, pour améliorer l'expérience utilisateur et renforcer la sécurité.
+
+Une méthode courante pour cela sur un système GNOME est d'utiliser la propriété `NoDisplay=true` dans les fichiers `.desktop` des applications concernées.
+
+### 1. Masquer une application en utilisant `NoDisplay=true`
+
+Dans GNOME, chaque application installée crée un fichier `.desktop` qui définit comment l'application est affichée dans le menu d'applications. 
+
+Pour **masquer une application**, nous allons ajouter ou modifier la ligne `NoDisplay=true` dans son fichier `.desktop`.
+
+#### Exemple de commande pour masquer une application :
+
+```bash
+sudo sed -i 's/^NoDisplay=false/NoDisplay=true/' /usr/share/applications/<nom-de-lapplication>.desktop
+```
+!!! note "fréquent"
+    La plupart du temps il ne reste que l'application `gnome-extensions-manager`.
 
 ---
 
