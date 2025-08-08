@@ -42,6 +42,7 @@ sudo setfacl -m u:client:0 /usr/bin/gnome-terminal
 
 sudo setfacl -m u:client:0 /usr/bin/gnome-software
 ```
+
 - Explications :
 
 `gnome-center-control` : Empêche l'utilisateur client d'ouvrir le centre de contrôle GNOME.
@@ -49,6 +50,57 @@ sudo setfacl -m u:client:0 /usr/bin/gnome-software
 `gnome-terminal`: Empêche l'utilisateur client d'ouvrir un terminal GNOME.
 
 `gnome-software`: Empêche l'utilisateur client d'accéder au gestionnaire de logiciels GNOME pour installer ou mettre à jour des applications.
+
+
+### Commandes sensibles
+
+Certaines applications et outils système doivent être particulièrement surveillés et restreints, car ils permettent de gérer des configurations avancées ou des éléments essentiels du système. Voici une liste de commandes supplémentaires pour limiter l'accès à ces outils sensibles.
+
+```bash
+sudo setfacl -m u:client:0 /usr/bin/gnome-extensions-app
+
+sudo setfacl -m u:client:0 /usr/bin/gnome-extensions
+
+sudo setfacl -m u:client:0 /usr/bin/apt
+
+sudo setfacl -m u:client:0 /usr/bin/dpkg
+
+sudo setfacl -m u:client:0 /usr/bin/gnome-shell-extension-prefs
+```
+
+-Explications :
+
+`gnome-extensions-app` et `gnome-extensions` : Empêchent l'utilisateur client de gérer les extensions GNOME.
+
+`apt` et `dpkg` : Empêchent l'utilisateur client d'installer, de mettre à jour ou de supprimer des paquets avec APT et DPKG.
+
+`gnome-shell-extension-prefs` : Empêche l'utilisateur client de modifier les préférences des extensions GNOME.
+
+**Commandes sensibles à traiter avec précaution**
+Ces commandes doivent être appliquées avec attention. Elles restreignent l'accès à des outils qui peuvent modifier l'environnement système de manière significative.
+
+!!! warning "Important"
+    Ne laissez pas ces commandes accessibles à des utilisateurs non autorisés. Ces outils peuvent affecter le système global.
+
+
+**Vérification des permissions :**
+
+Après avoir appliqué les ACL, il est crucial de vérifier que l'utilisateur client ne peut pas exécuter les commandes restreintes. Vous pouvez tester les restrictions avec les commandes suivantes :
+
+```bash
+sudo -u client gnome-control-center
+
+sudo -u client gnome-terminal
+
+sudo -u client gnome-software
+
+sudo -u client gnome-extensions-app
+```
+
+
+
+
+
 ---
 
 
