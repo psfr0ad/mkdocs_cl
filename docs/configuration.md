@@ -52,15 +52,59 @@ Dans les pages suivantes, nous allons aborder les configurations minimales et av
 
 ---
 
-## Configuration système
+## Configuration utilisateur
 
-<!-- Contenu à venir -->
+Dans un environnement client léger, il est important de créer un utilisateur dédié et de **limiter ses droits** pour garantir la sécurité et le bon fonctionnement du système.
+
+Cette section vous guide pour :
+
+- Créer un nouvel utilisateur
+- Définir son mot de passe
+- Restreindre ses privilèges (suppression du droit `sudo`)
+- Appliquer les bonnes pratiques de sécurité
 
 ---
 
-## Configuration utilisateur
+## 🧑‍💻 Création de l'utilisateur
 
-<!-- Contenu à venir -->
+Nous allons créer un utilisateur standard, par exemple nommé `client`.
+
+
+`sudo adduser client`
+
+Le système vous demandera :
+
+ - Mot de passe
+
+ - Informations facultatives (vous pouvez les laisser vides)
+
+ 🔐 Retirer les droits sudo
+
+Par défaut, l’utilisateur n’a pas accès à sudo.
+
+Mais si vous l’avez ajouté à un groupe comme sudo ou adm par erreur, vous pouvez le retirer :
+
+`sudo deluser client sudo`
+
+Vérifiez qu’il n’appartient à aucun groupe privilégié :
+
+`groups client`
+
+L'utilisateur ne doit faire partie que de groupes standards comme client, users, etc.
+
+
+!!! warning "Important"
+Ne retirez pas vos propres droits sudo si vous êtes connecté avec cet utilisateur !
+Assurez-vous d’avoir un accès administrateur via un autre compte.
+
+---
+
+✅ Bonnes pratiques
+Ne jamais donner sudo à un utilisateur final non technique
+
+Bloquer les accès à des fichiers sensibles (/etc, /var/log, etc.)
+
+Activer des politiques de mots de passe si nécessaire (pam_pwquality, chage, etc.)
 
 ---
 
