@@ -50,7 +50,7 @@ Dans les pages suivantes, nous allons aborder les configurations minimales et av
 
 ---
 
-## Configuration utilisateur
+## **Configuration utilisateur**
 
 Dans un environnement client léger, il est important de créer un utilisateur dédié et de **limiter ses droits** pour garantir la sécurité et le bon fonctionnement du système.
 
@@ -106,7 +106,7 @@ Activer des politiques de mots de passe si nécessaire (pam_pwquality, chage, et
 
 ---
 
-## Configuration des applications .desktop et .sh :
+## **Configuration des applications .desktop et .sh :**
 
 1) Configuration d'un autostart d'application ici pour Remmina :
 
@@ -238,7 +238,7 @@ StartUpNotify=true
     `sudo chmod +x   /home/client/.local/share/applications/logout.desktop`
 
 
-### Configuration de L'extension de Just Perfection
+### **Configuration de L'extension de Just Perfection**
 
 
 - **🔍 1. Rechercher l’extension "Just Perfection"**
