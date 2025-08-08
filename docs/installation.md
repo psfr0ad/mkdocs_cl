@@ -26,17 +26,17 @@ Debian utilise un fichier appelé /etc/apt/sources.list pour définir les dépô
 **Voici un exemple de configuration propre et complète pour Debian stable :**
 
 ```bash
-deb http://deb.debian.org/debian/ stable main contrib non-free
+deb https://deb.debian.org/debian bookworm main non-free-firmware
 
-deb-src http://deb.debian.org/debian/ stable main contrib non-free
+deb-src https://deb.debian.org/debian bookworm main non-free-firmware
 
-deb http://security.debian.org/debian-security stable-security main contrib non-free
+deb https://security.debian.org/debian-security bookworm-security main non-free-firmware
 
-deb-src http://security.debian.org/debian-security stable-security main contrib non-free
+deb-src https://security.debian.org/debian-security bookworm-security main non-free-firmware
 
-deb http://deb.debian.org/debian/ stable-updates main contrib non-free
+deb https://deb.debian.org/debian bookworm-updates main non-free-firmware
 
-deb-src http://deb.debian.org/debian/ stable-updates main contrib non-free
+deb-src https://deb.debian.org/debian bookworm-updates main non-free-firmware
 ```
 
 
